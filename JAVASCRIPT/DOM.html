@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is heading</h1>
+    <p id="i1">I can change text</p>
+    <button onclick="change()">Click me</button>
+    <script>
+      function change() {
+        document.getElementById("i1").innerHTML = "Text changed";
+      }
+      <!--DOM is a subset of BOM(window object)-->
+    </script>
+  </body>
+</html>

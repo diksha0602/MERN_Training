@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Diksha(a) {
+        console.log("Hie, im diksha want to talk to ashmitttt");
+        a(Nayana);
+      }
+      function ashmit(naya) {
+        console.log("helloo love, this is ashmit, get in touch with nayana");
+        naya();
+      }
+      function Nayana() {
+        console.log("HIE this is nayanaa");
+      }
+      Diksha(ashmit);
+      //callback-callbacks after a callback it leads to callback hell.
+
+      let Richie = (amith) => {
+        console.log("Richie getting in touch with amith");
+        amith(() => {
+          console.log("Hie i am nayana");
+        });
+      };
+      Richie((nayana) => {
+        console.log("I am Amith, call nayana");
+        nayana();
+      });
+    </script>
+  </body>
+</html>

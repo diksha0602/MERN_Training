@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function getMoney() {
+      //     return new Promise(function (resolve, reject) {
+      //       reject(100);
+      //     });
+      //   }
+      //   function getMoney() {
+      //     return new Promise(function (resolve, reject) {
+      //       resolve(100);
+      //     });
+      //   }
+      function getMoney() {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            reject(100);
+          }, 3000); //Asynchronous function.. to see the pending state
+        });
+      }
+      //asynchronous se kya hua na ki that reject block is taking time to execute
+      // so the next line of console.log will be executing
+      //it wont wait. for the first function to get completed.
+
+      let you = getMoney();
+      console.log(you);
+    </script>
+  </body>
+</html>

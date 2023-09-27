@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      <!--Asynchronous programming-->
+      //multiple functions run parallely..
+      function OrderPizza(pd) {
+        let order = "Margaritta";
+        console.log("Pizza Ordered " + order);
+        //making this function as asynchronous function.
+        //using settimeout() function.
+        setTimeout(() => {
+          pd();
+        }, 3000);
+      }
+      function DeliverPizza() {
+        let address = "Tagore Nagar";
+        console.log("Out for delivery, takes 30 mins to arrive");
+        console.log("Delivered at " + address);
+      }
+
+      function callFriend() {
+        console.log("Friend called");
+        console.log("takes 30 mins to arrive");
+      }
+      OrderPizza(DeliverPizza);
+      callFriend();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getMoney() {
+        return new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            resolve(100);
+          }, 3000);
+        });
+      }
+      function success() {
+        console.log("i got my money");
+      }
+      function failure() {
+        console.log("That fellow did'nt give my money");
+      }
+      let you = getMoney();
+      //console.log(you);
+      //you.then(success).catch(failure);
+
+      //another method//
+      you
+        .then(() => {
+          console.log("I got my money");
+        })
+        .catch(() => {
+          console.log("That fellow did'nt give my money");
+        });
+    </script>
+  </body>
+</html>

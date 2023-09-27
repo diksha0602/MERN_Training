@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "Diksha",
+        age: 25,
+        qualification: "btech",
+      };
+      // console.log(person);
+      //ways to access the values of the object
+      //   document.write(person);
+      //   document.write(person.name + "<br>");
+      //   document.write(person.age + "<br>");
+      //   document.write(person.qualification + "<br>");
+
+      //   document.write(person["name"]);
+      //   document.write(person["age"]);
+      //   document.write(person["qualification"]);
+
+      // we can use FOR loop also to print the attributes of an object..
+      //to avoid writing the document.write() code several times..
+      for (let p in person) {
+        console.log(p);
+        //console.log(typeof p);
+        document.write(person[p] + "<br>");
+      }
+    </script>
+  </body>
+</html>

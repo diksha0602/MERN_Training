@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function OrderPizza(pd) {
+        let order = "Margaritta";
+        console.log("Pizza Ordered " + order);
+        pd();
+      }
+      function DeliverPizza() {
+        let address = "Tagore Nagar";
+        console.log("Delivered at " + address);
+      }
+      OrderPizza(DeliverPizza);
+      //call-back function- when a function is passes as a parameter to another function..
+      function TotalBill(a, b, c, sd) {
+        let total = a + b + c;
+        console.log("Total Bill is: " + total);
+        sd(total);
+      }
+      function StudDiscount(x) {
+        let final = x - 100;
+        console.log("After student discount " + final);
+      }
+      TotalBill(300, 200, 700, StudDiscount);
+    </script>
+  </body>
+</html>

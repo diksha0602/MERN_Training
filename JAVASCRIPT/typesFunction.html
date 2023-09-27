@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //NORMAL FUNCTION
+      function sum(a, b) {
+        let result = a + b;
+        return result;
+      }
+      let c = sum(10, 20);
+      console.log(c);
+      let d = sum(6, 2);
+      console.log(d);
+      console.log(sum(40, 10));
+      
+      //ANONYMOUS FUNCTION
+      let func = function () {
+        console.log("I am an anonymous function");
+      };
+      func(); //I am an anonymous function
+      func(); //I am an anonymous function
+      func(); //I am an anonymous function
+
+      //anonymous function does'nt have a name,
+      // we assign the function to a variable
+      //then we call the variable name...
+
+      <!--ARROW FUNCTION-->
+      let arrow = () => {
+        console.log("I am an arrow function");
+      };
+      arrow(); //I am an arrow function
+
+      let sum_arrow = (x, y) => {
+        let res = x + y;
+        console.log(res);
+      };
+      sum_arrow(10, 20); //30
+    </script>
+  </body>
+</html>
